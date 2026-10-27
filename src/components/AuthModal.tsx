@@ -86,12 +86,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-[#0B101B] border border-slate-800 rounded-2xl max-w-md w-full p-6 sm:p-8 space-y-6 shadow-2xl relative">
+    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4">
+      <div className="bg-[#0B101B] border border-slate-800 rounded-t-2xl sm:rounded-2xl max-w-md w-full max-h-[92dvh] sm:max-h-[90dvh] overflow-y-auto overscroll-contain p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:p-8 space-y-5 sm:space-y-6 shadow-2xl relative">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-slate-400 hover:text-white p-1 rounded-lg"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-slate-400 hover:text-white p-2.5 sm:p-1 rounded-lg"
           title="Close"
+          aria-label="Close"
         >
           <X className="w-5 h-5" />
         </button>
@@ -101,7 +102,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
           <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white font-black text-sm mb-3 shadow-sm">
             SP
           </div>
-          <h2 className="text-xl font-bold text-white tracking-tight">
+          <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight pr-8">
             {mode === 'login' && 'Sign in to SellPilot AI'}
             {mode === 'register' && 'Create your business account'}
             {mode === 'forgot' && 'Reset your account password'}
@@ -116,14 +117,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
         {error && (
           <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-xl text-red-200 text-xs flex items-center gap-2">
             <AlertCircle className="w-4 h-4 text-red-400 shrink-0" />
-            <span>{error}</span>
+            <span className="min-w-0 break-words">{error}</span>
           </div>
         )}
 
         {successMsg && (
           <div className="p-3 bg-emerald-950/40 border border-emerald-800/40 rounded-xl text-emerald-200 text-xs flex items-center gap-2">
             <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>{successMsg}</span>
+            <span className="min-w-0 break-words">{successMsg}</span>
           </div>
         )}
 
@@ -154,7 +155,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">Business Type</label>
                   <select
@@ -208,7 +209,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
                 <button
                   type="button"
                   onClick={() => setMode('forgot')}
-                  className="text-[11px] text-indigo-400 hover:text-indigo-300 font-medium"
+                  className="py-1.5 -my-1.5 text-[11px] text-indigo-400 hover:text-indigo-300 font-medium"
                 >
                   Forgot password?
                 </button>
@@ -228,7 +229,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm disabled:opacity-50 mt-2"
+            className="w-full py-3 sm:py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm disabled:opacity-50 mt-2"
           >
             {loading ? (
               <RefreshCw className="w-4 h-4 animate-spin" />
@@ -250,7 +251,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
               <button
                 type="button"
                 onClick={() => setMode('register')}
-                className="text-indigo-400 hover:text-indigo-300 font-semibold"
+                className="py-2 text-indigo-400 hover:text-indigo-300 font-semibold"
               >
                 Sign up free
               </button>
@@ -261,7 +262,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
               <button
                 type="button"
                 onClick={() => setMode('login')}
-                className="text-indigo-400 hover:text-indigo-300 font-semibold"
+                className="py-2 text-indigo-400 hover:text-indigo-300 font-semibold"
               >
                 Sign in
               </button>
@@ -275,11 +276,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
             <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
             Instant Evaluation Shortcuts
           </div>
-          <div className="grid grid-cols-2 gap-2 pt-1">
+          <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-2 pt-1">
             <button
               type="button"
               onClick={() => handleQuickDemoLogin('demo@sellpilot.ai', 'password123')}
-              className="p-2 bg-slate-800 hover:bg-slate-700 text-left rounded-lg text-[11px] text-slate-200 transition-colors"
+              className="p-2.5 sm:p-2 bg-slate-800 hover:bg-slate-700 text-left rounded-lg text-[11px] text-slate-200 transition-colors"
             >
               <div className="font-bold text-white">Amara Kalu</div>
               <div className="text-slate-400">Fashion Vendor (Pro)</div>
@@ -288,7 +289,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, initialMode, onClo
             <button
               type="button"
               onClick={() => handleQuickDemoLogin('emmanuelochuru09@gmail.com', 'AdminPass123!')}
-              className="p-2 bg-slate-800 hover:bg-slate-700 text-left rounded-lg text-[11px] text-slate-200 transition-colors"
+              className="p-2.5 sm:p-2 bg-slate-800 hover:bg-slate-700 text-left rounded-lg text-[11px] text-slate-200 transition-colors"
             >
               <div className="font-bold text-amber-400">Admin Account</div>
               <div className="text-slate-400">System Owner</div>
