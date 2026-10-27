@@ -14,6 +14,9 @@ import {
   ShieldCheck,
   Smartphone,
 } from 'lucide-react';
+import heroImg from '../assets/images/hero_business_dashboard_1793117713788.jpg';
+
+const heroCdn = (w: number) => `/.netlify/images?url=${encodeURIComponent(heroImg)}&w=${w}&fm=webp&q=75`;
 
 interface LandingViewProps {
   onOpenAuth: (mode: 'login' | 'register') => void;
@@ -22,18 +25,18 @@ interface LandingViewProps {
 
 export const LandingView: React.FC<LandingViewProps> = ({ onOpenAuth, onNavigate }) => {
   return (
-    <div className="space-y-24 pb-24">
+    <div className="space-y-16 sm:space-y-24 pb-16 sm:pb-24">
       {/* 1. Hero Section */}
       <section className="relative pt-12 sm:pt-20 lg:pt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-6">
           {/* Unboxed clean metadata kicker */}
-          <div className="text-xs font-semibold text-indigo-400 tracking-wide uppercase">
+          <div className="text-[11px] sm:text-xs font-semibold text-indigo-400 tracking-wide uppercase">
             <span>Built For Small Businesses & Vendors</span>
             <span aria-hidden="true" className="mx-2 text-slate-600">·</span>
             <span>Nigeria & Global Commerce</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] text-balance">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] text-balance">
             Turn Your Business Into a <span className="text-indigo-400">Sales Machine.</span>
           </h1>
 
@@ -70,29 +73,35 @@ export const LandingView: React.FC<LandingViewProps> = ({ onOpenAuth, onNavigate
         {/* Hero Visual Mockup */}
         <div className="mt-12 sm:mt-16 relative max-w-5xl mx-auto rounded-2xl overflow-hidden border border-slate-800 bg-[#0B101B] shadow-2xl">
           <img
-            src="/src/assets/images/hero_business_dashboard_1793117713788.jpg"
+            src={heroCdn(1200)}
+            srcSet={`${heroCdn(640)} 640w, ${heroCdn(960)} 960w, ${heroCdn(1200)} 1200w`}
+            sizes="(min-width: 1024px) 1024px, calc(100vw - 2rem)"
+            width={1376}
+            height={768}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             alt="SellPilot AI Business Growth Dashboard"
             className="w-full h-auto object-cover max-h-[540px]"
-            referrerPolicy="no-referrer"
           />
         </div>
 
         {/* Proof KPI Strip Below Hero */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-8 max-w-5xl mx-auto">
           <div className="p-4 bg-[#0B101B] border border-slate-800 rounded-xl text-center">
-            <div className="text-2xl font-bold font-mono text-white tabular-nums">4.8x</div>
+            <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums">4.8x</div>
             <div className="text-xs text-slate-400 mt-1">Faster WhatsApp conversions</div>
           </div>
           <div className="p-4 bg-[#0B101B] border border-slate-800 rounded-xl text-center">
-            <div className="text-2xl font-bold font-mono text-white tabular-nums">60 sec</div>
+            <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums">60 sec</div>
             <div className="text-xs text-slate-400 mt-1">To generate complete ad suite</div>
           </div>
           <div className="p-4 bg-[#0B101B] border border-slate-800 rounded-xl text-center">
-            <div className="text-2xl font-bold font-mono text-white tabular-nums">100%</div>
+            <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums">100%</div>
             <div className="text-xs text-slate-400 mt-1">Mobile responsive websites</div>
           </div>
           <div className="p-4 bg-[#0B101B] border border-slate-800 rounded-xl text-center">
-            <div className="text-2xl font-bold font-mono text-white tabular-nums">₦ & $</div>
+            <div className="text-xl sm:text-2xl font-bold font-mono text-white tabular-nums">₦ & $</div>
             <div className="text-xs text-slate-400 mt-1">Nigerian & international billing</div>
           </div>
         </div>
@@ -102,7 +111,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onOpenAuth, onNavigate
       <section id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Features & Tooling</div>
-          <h2 className="text-3xl font-extrabold text-white tracking-tight">Everything You Need to Attract & Close Buyers</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight text-balance">Everything You Need to Attract & Close Buyers</h2>
           <p className="text-sm text-slate-400">
             A cohesive platform replacing disconnected tools with unified AI marketing, lead tracking, and website hosting.
           </p>
@@ -199,7 +208,7 @@ export const LandingView: React.FC<LandingViewProps> = ({ onOpenAuth, onNavigate
       <section id="solutions" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <div className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">Target Industries</div>
-          <h2 className="text-3xl font-extrabold text-white tracking-tight">Tailored for Real Businesses</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight text-balance">Tailored for Real Businesses</h2>
           <p className="text-sm text-slate-400">
             SellPilot AI adapts its tone, copy, and sales workflows to your specific commercial niche.
           </p>
@@ -292,8 +301,8 @@ export const LandingView: React.FC<LandingViewProps> = ({ onOpenAuth, onNavigate
 
       {/* 5. Bottom CTA Banner */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-indigo-950 via-[#0B101B] to-slate-900 border border-indigo-800/40 rounded-3xl p-8 sm:p-12 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        <div className="bg-gradient-to-r from-indigo-950 via-[#0B101B] to-slate-900 border border-indigo-800/40 rounded-3xl p-6 sm:p-12 text-center space-y-6">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight text-balance">
             Ready to Turn Your Business Into a Sales Machine?
           </h2>
           <p className="text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
