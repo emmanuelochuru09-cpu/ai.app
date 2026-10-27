@@ -1,0 +1,235 @@
+{
+  "users": [
+    {
+      "id": "user_admin",
+      "email": "emmanuelochuru09@gmail.com",
+      "passwordHash": "a44ca5d29f6dab4320ab986479fa985b2d584b11a7da934f7e80bb1449913a07",
+      "fullName": "Emmanuel Ochuru",
+      "businessName": "SellPilot HQ",
+      "businessType": "Technology & SaaS",
+      "currency": "NGN",
+      "role": "admin",
+      "plan": "business",
+      "planExpiresAt": "2028-12-31T23:59:59Z",
+      "aiCreditsUsed": 14,
+      "aiCreditsLimit": 2500,
+      "createdAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "user_demo_vendor",
+      "email": "demo@sellpilot.ai",
+      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "fullName": "Amara Kalu",
+      "businessName": "Luxe Lagos Apparel",
+      "businessType": "Fashion & Clothing Vendor",
+      "currency": "NGN",
+      "role": "user",
+      "plan": "pro",
+      "planExpiresAt": "2027-04-30T23:59:59Z",
+      "aiCreditsUsed": 42,
+      "aiCreditsLimit": 300,
+      "createdAt": "2026-02-10T14:30:00Z"
+    }
+  ],
+  "content": [
+    {
+      "id": "cnt_1",
+      "userId": "user_demo_vendor",
+      "type": "ad",
+      "title": "Weekend Flash Sale - Ready to Wear Kaftans",
+      "platform": "Instagram",
+      "data": {
+        "headlines": [
+          "Turn Heads This Sunday With Handcrafted Luxury Kaftans",
+          "Premium Nigerian Fabric, Unmatched Elegance"
+        ],
+        "socialCaptions": [
+          "Upgrade your weekend wardrobe! Our breathable, handcrafted royal collection is now available with free delivery in Lagos & Abuja. Limited pieces in stock. Tap the link in bio to claim your 15% discount code! #LagosFashion #NigerianFashion #AsoEbi"
+        ],
+        "ctas": [
+          "Shop The Collection",
+          "Order on WhatsApp Now"
+        ],
+        "marketingAngles": [
+          "Heritage luxury meets modern comfort",
+          "Limited-run prestige pieces"
+        ]
+      },
+      "createdAt": "2026-03-01T08:00:00Z"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead_1",
+      "userId": "user_demo_vendor",
+      "fullName": "Mrs. Folake Adebayo",
+      "email": "folake.adebayo@gmail.com",
+      "phone": "+234 803 241 8892",
+      "source": "WhatsApp",
+      "status": "Interested",
+      "dealValue": 65000,
+      "currency": "NGN",
+      "notes": "Inquired about the Emerald Silk Kaftan for a bridal train. Requested fabric sample video.",
+      "nextFollowUp": "2026-10-29",
+      "createdAt": "2026-10-20T11:20:00Z",
+      "updatedAt": "2026-10-25T16:10:00Z"
+    },
+    {
+      "id": "lead_2",
+      "userId": "user_demo_vendor",
+      "fullName": "David Sterling",
+      "email": "david.sterling@sterlingmedia.co",
+      "phone": "+44 7700 900142",
+      "source": "Instagram",
+      "status": "Converted",
+      "dealValue": 180000,
+      "currency": "NGN",
+      "notes": "Bulk order for 3 tailored safari suits. Shipped via DHL to London. Payment confirmed.",
+      "nextFollowUp": null,
+      "createdAt": "2026-10-12T09:15:00Z",
+      "updatedAt": "2026-10-22T14:00:00Z"
+    },
+    {
+      "id": "lead_3",
+      "userId": "user_demo_vendor",
+      "fullName": "Dr. Chidi Okonkwo",
+      "email": "chidi.okonkwo@apexhealth.ng",
+      "phone": "+234 812 559 3011",
+      "source": "Website",
+      "status": "Contacted",
+      "dealValue": 45000,
+      "currency": "NGN",
+      "notes": "Submitted enquiry through website contact form. Sent catalog via WhatsApp.",
+      "nextFollowUp": "2026-10-28",
+      "createdAt": "2026-10-24T15:45:00Z",
+      "updatedAt": "2026-10-24T17:00:00Z"
+    }
+  ],
+  "websites": [
+    {
+      "id": "web_1",
+      "userId": "user_demo_vendor",
+      "slug": "luxe-lagos-apparel",
+      "businessName": "Luxe Lagos Apparel",
+      "tagline": "Authentic African Elegance Tailored For The Modern World",
+      "description": "Bespoke native wear, ready-to-wear luxury kaftans, and bridal attire hand-crafted in Lagos, Nigeria.",
+      "industry": "Fashion & Clothing",
+      "phone": "+234 803 241 8892",
+      "whatsapp": "2348032418892",
+      "email": "contact@luxelagos.ng",
+      "address": "14 Admiralty Way, Lekki Phase 1, Lagos, Nigeria",
+      "themeColor": "#0F766E",
+      "heroHeadline": "Exquisite African Fashion, Handcrafted With Prestige",
+      "heroSubheadline": "Experience unparalleled craftsmanship and rich African heritage in every bespoke stitch.",
+      "aboutStory": "Founded in Lagos, Luxe Lagos Apparel marries traditional textile artistry with contemporary tailoring. From red-carpet ceremonies to relaxed corporate looks, our designs empower confidence and class.",
+      "services": [
+        {
+          "title": "Bespoke Senator & Agbada Sets",
+          "price": "₦85,000+",
+          "description": "Custom-tailored sets using premium Irish linen and cashmere wool.",
+          "features": [
+            "Personal fitting session",
+            "Hand-stitched pocket details",
+            "Fast 5-day delivery"
+          ]
+        },
+        {
+          "title": "Ready-to-Wear Kaftans",
+          "price": "₦45,000",
+          "description": "Effortless luxury kaftans for weekend gatherings and dinners.",
+          "features": [
+            "Breathable cotton blends",
+            "Sizes XS to 4XL",
+            "Worldwide DHL shipping"
+          ]
+        },
+        {
+          "title": "Bridal & Aso-Ebi Production",
+          "price": "Custom Quote",
+          "description": "Coordinated occasion ensembles for bridal parties and VIP guests.",
+          "features": [
+            "Group fabric sourcing",
+            "Color matching guidance",
+            "Priority batch fulfillment"
+          ]
+        }
+      ],
+      "testimonials": [
+        {
+          "name": "Kemi Balogun",
+          "role": "Creative Director, Lagos",
+          "quote": "The attention to detail on the Agbada was unmatched. Received endless compliments at our family gala!"
+        },
+        {
+          "name": "Emeka Nwosu",
+          "role": "Founder, TradeBridge UK",
+          "quote": "Seamless ordering experience from London. WhatsApp customer support was fast and delivery was right on time."
+        }
+      ],
+      "isPublished": true,
+      "publishedAt": "2026-03-02T12:00:00Z",
+      "createdAt": "2026-03-01T10:00:00Z",
+      "updatedAt": "2026-03-02T12:00:00Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx_1",
+      "userId": "user_demo_vendor",
+      "userEmail": "demo@sellpilot.ai",
+      "reference": "SP-PAY-882194-NGN",
+      "provider": "Paystack",
+      "plan": "pro",
+      "amount": 15000,
+      "currency": "NGN",
+      "status": "success",
+      "createdAt": "2026-02-10T14:32:00Z"
+    }
+  ],
+  "systemLogs": [
+    {
+      "id": "log_1793118399263_k0ebd",
+      "timestamp": "2026-10-27T16:26:39.263Z",
+      "level": "info",
+      "message": "User logged in: demo@sellpilot.ai"
+    },
+    {
+      "id": "log_1",
+      "timestamp": "2026-10-27T08:00:00Z",
+      "level": "info",
+      "message": "SellPilot AI System Engine initialized in production-ready mode"
+    }
+  ],
+  "config": {
+    "plans": {
+      "free": {
+        "name": "Free Starter",
+        "priceNGN": 0,
+        "priceUSD": 0,
+        "aiCredits": 25,
+        "websites": 0
+      },
+      "pro": {
+        "name": "Pro Growth",
+        "priceNGN": 15000,
+        "priceUSD": 19,
+        "aiCredits": 300,
+        "websites": 3
+      },
+      "business": {
+        "name": "Business Scale",
+        "priceNGN": 45000,
+        "priceUSD": 49,
+        "aiCredits": 2500,
+        "websites": 15
+      }
+    },
+    "features": {
+      "aiAds": true,
+      "socialMedia": true,
+      "websiteGenerator": true,
+      "leadManager": true,
+      "whatsappSuite": true
+    }
+  }
+}

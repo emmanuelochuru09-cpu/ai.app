@@ -1,0 +1,6 @@
+{
+  "name": "SellPilot AI",
+  "description": "Intelligent business growth platform to generate AI ads, social media content, websites, CRM leads, and sales automation for businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
